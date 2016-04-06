@@ -3,15 +3,18 @@ var router = express.Router();
 
 var User = require('../models/user');
 
+
+
 router.get('/', function(req, res) {
   User.find({}, function(err, users) {
     res.status(err ? 499 : 200).send(err || users);
   });
 });
 
-// router.get('/me', User.authMiddleWare, function(req, res) {
-//   res.send(req.user)
-// })
+
+router.get('/me', User.authMiddleware, function(req, res) {
+  res.send(req.user)
+})
 
 // get all users from db
 router.get('/all', (req, res)=> {
