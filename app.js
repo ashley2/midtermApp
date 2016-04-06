@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config()
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -35,6 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
 
 app.use(function(req, res){
   res.status(404).render('404');

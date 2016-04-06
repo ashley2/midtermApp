@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var jwt = require('jwt-simple');
 var moment = require('moment');
+require('dotenv').config()
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
