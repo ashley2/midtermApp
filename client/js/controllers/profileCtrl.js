@@ -3,7 +3,6 @@ var app = angular.module('testApp');
 app.controller('profileCtrl', function($scope, $http, UserService, $state)  {
 
 
-
  // $http.get('/users/me')
  //  .then(function(res) {
  //    $scope.user = res.data
@@ -39,6 +38,10 @@ $scope.saveEdit = function(user){
     console.log(err);
   })
 }
+
+
+
+
 
 });
 

@@ -19,5 +19,19 @@ app.service('UserService', function($http) {
  // this.saveEdit = () => $http.put('/users/')
  this.update = function(user){
   return $http.put('/users', user);
+
 };
 });
+
+
+
+app.service('BeerService', function($http) {
+
+this.getRandomBeer = function(){
+$http.get(`http://api.brewerydb.com/v2/?key=${API_KEY}`)
+   // .then(res
+
+}
+
+
+  });

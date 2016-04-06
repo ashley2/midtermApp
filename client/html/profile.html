@@ -3,9 +3,14 @@
 
 <div id="profileBody">
   <h1>Welcome {{user.username}}!</h1>
+
+
+<div>Are you ready to check out some <a ui-sref="beer">BEER<a/>!!!!</div>
+
+
   <div class="row">
     <div class="col-l6">
-    <div ng-hide="viewEdit">
+      <div ng-hide="viewEdit">
 
         <img ng-src={{user.photo}}>
         <br>

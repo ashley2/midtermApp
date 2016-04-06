@@ -18,6 +18,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "/html/profile.html",
     controller: "profileCtrl"
   })
+  .state('beer', {
+    url: "/beer/",
+    templateUrl: "/html/beer.html",
+    controller: "beerCtrl"
+  })
 
   $urlRouterProvider.otherwise('/');
 });
