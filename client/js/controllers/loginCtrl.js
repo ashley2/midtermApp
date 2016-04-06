@@ -11,6 +11,3 @@ app.controller('loginCtrl', function($scope, UserService, $state) {
       });
   }
 });
-
-
-});

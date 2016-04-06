@@ -13,11 +13,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "/html/login.html",
     controller: "loginCtrl"
   })
-  // .state('profile', {
-  //   url: "/profile/",
-  //   templateUrl: "templates/profile.html",
-  //   controller: "profileCtrl"
-  // })
+  .state('profile', {
+    url: "/profile/",
+    templateUrl: "/html/profile.html",
+    controller: "profileCtrl"
+  })
 
   $urlRouterProvider.otherwise('/');
 });

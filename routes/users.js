@@ -9,19 +9,19 @@ router.get('/', function(req, res) {
   });
 });
 
-router.get('/me', User.authMiddleWare, function(req, res) {
-  res.send(req.user)
-})
-
-//get all users from db
-// router.get('/all', (req, res)=> {
-//   User.find({}, (err, data) => {
-//     if(err) {
-//       return res.status(499).send(err)
-//     }
-//     res.send(data);
-//   })
+// router.get('/me', User.authMiddleWare, function(req, res) {
+//   res.send(req.user)
 // })
+
+// get all users from db
+router.get('/all', (req, res)=> {
+  User.find({}, (err, data) => {
+    if(err) {
+      return res.status(499).send(err)
+    }
+    res.send(data);
+  })
+})
 
 router.post('/authenticate', function(req, res) {
   User.authenticate(req.body, function(err, token) {
