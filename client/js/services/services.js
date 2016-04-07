@@ -19,10 +19,9 @@ app.service('UserService', function($http) {
 
 app.service('BeerService', function($http) {
 
-  var key = d3a6e9af599d7fd0d670ecbaa52211b3;
+var key = 'd3a6e9af599d7fd0d670ecbaa52211b3';
 
-  BeerService.getRandomBeer = function(){
-    return $http.get(`http://api.brewerydb.com/v2/?key=${key}`)
-  }
+  this.getRandomBeer = () => $http.get(`http://api.brewerydb.com/v2/?key=${key}`)
+   
 
 });

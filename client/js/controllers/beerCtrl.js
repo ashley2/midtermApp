@@ -3,14 +3,13 @@
 var app = angular.module('testApp');
 
 
-app.controller('beerCtrl', function($scope, UserService, $http) {
+app.controller('beerCtrl', function($scope, BeerService, $http) {
 
-$scope.getRandomBeer = function(){
-  console.log('click')
-  .then(function(res){
-   }, function(err){
-    console.log(err)
-   })
-}
-
+  $scope.getRandomBeer = function(){
+    BeerService.getRandomBeer()
+      .then(function(res){
+      }, function(err){
+        console.log(err)
+      })
+    }
 });
