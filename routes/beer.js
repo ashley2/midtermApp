@@ -5,12 +5,11 @@
 var express = require('express');
 var router = express.Router();
 
-// var Beer = require('../models/beer');
 
-router.get('/', function(req, res) {
-  User.find({}, function(err, users) {
+router.get('/beer/random', function(req, res) {
+
     res.status(err ? 499 : 200).send(err || users);
-  });
+  // });
 });
 
 

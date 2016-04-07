@@ -15,9 +15,8 @@ var userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   email: {type: String },
   photo: {type: String},
-  beerSampled: {type: Boolean},
-
-
+  beers: [{type: Object}]
+  // {name: string, tasted: boolean, comment: string, rating: number}],
 });
 
 userSchema.statics.authMiddleware = function(req, res, next) {
